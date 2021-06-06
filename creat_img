@@ -1,0 +1,17 @@
+import numpy as np
+nimg = np.zeros( ( 720,720))
+import cv2
+cv2.imshow('1st img' , nimg)
+cv2.waitKey()
+cv2.destroyAllWindows()
+
+cv2.circle(nimg , (300,150) , 70 ,[135,255,12 ], 5)
+cv2.rectangle( nimg , (200,260) , (400,400) , [135,255,12 ], 5 )
+cv2.rectangle( nimg , (100,300) , (190,260) , [135,255,12 ], 5 )
+cv2.rectangle( nimg , (410,300) , (500,260) , [135,255,12 ], 5 )
+cv2.rectangle( nimg , (200,410) , (280,600) , [135,255,12 ], 5 )
+cv2.rectangle( nimg , (320,410) , (400,600) , [135,255,12 ], 5 )
+
+cv2.imshow('1st img' , nimg)
+cv2.waitKey()
+cv2.destroyAllWindows()
