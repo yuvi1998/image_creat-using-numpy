@@ -1,0 +1,28 @@
+import cv2
+img1 = cv2.imread('bmimg1.jpg')
+img2 = cv2.imread('bmimg2.jpg')
+cv2.imshow('1st img' , img1)
+cv2.waitKey()
+cv2.destroyAllWindows()
+cv2.imshow('2img' , img2)
+cv2.waitKey()
+cv2.destroyAllWindows()
+import numpy as np
+newimg = np.hstack( ( img1 , img2 ))
+cv2.imshow('mearge image' , newimg)
+cv2.waitKey()
+cv2.destroyAllWindows()
+cimg1 = img1[54:108 , 10:280]
+#cimg1 = img1[54:108 , 10:135]
+cv2.imshow('crop image' , cimg1)
+cv2.waitKey()
+cv2.destroyAllWindows()
+cimg2 = img2[54:150 , 10:280]
+cv2.imshow('crop image' , cimg2)
+cv2.waitKey()
+cv2.destroyAllWindows()
+import numpy as np
+newimg = np.vstack( ( cimg1 , cimg2 ))
+cv2.imshow('mearge image' , newimg)
+cv2.waitKey()
+cv2.destroyAllWindows()
